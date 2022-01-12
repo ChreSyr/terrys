@@ -1013,6 +1013,8 @@ class Player(pygame.sprite.Sprite):
         self.ia = ia
         if not ia:
             self.input = pygame.joystick.Joystick(color)
+            if pygame.joystick.get_count() < 1:
+                print("No player connected")
         else:
             self.input = InputIA(self)
 
