@@ -11,10 +11,10 @@ fullscreen = False
 if fullscreen: fullscreen = pygame.FULLSCREEN
 ecran = pygame.display.set_mode((1280, 750), fullscreen)
 
-from Classes import BoutonText, BoutonImage, MissileChemin, AnimatedBloc, StaticBloc, AnimatedParticle, StaticParticle
-from Classes import Vector, Position
-from Classes import im, font
-from Fonctions import arrondir, closest, distance_pnts, f, get_angle, modulo, racine, sign, trouve
+from classes import BoutonText, BoutonImage, MissileChemin, AnimatedBloc, StaticBloc, AnimatedParticle, StaticParticle
+from classes import Vector, Position
+from classes import im, font
+from fonctions import arrondir, closest, distance_pnts, f, get_angle, modulo, racine, sign, trouve
 # from Fonctions import print_grid
 ter = vert = rouge = bleu = admin = 0
 pygame.display.set_icon(im.game_icon)
@@ -77,7 +77,7 @@ class Game:
         Methode qui cree les terrains de jeu a partir des fichiers existants
         """
 
-        f_infos = open("Infos.txt")
+        f_infos = open("infos.txt")
         infos = f_infos.read()
         f_infos.close()
         infos = infos.split("\n")
