@@ -81,63 +81,63 @@ class MissileChemin:
                     run = False"""
 
 
-class Images:
+class images:
 
     def __init__(self):
 
-        self.game_icon = pygame.image.load("Images/Blocs/stonebrick.png")
+        self.game_icon = pygame.image.load("images/blocs/stonebrick.png")
 
         # Fonds
-        self.landscape = pygame.image.load("Images/fond ecran.png").convert()
-        self.fond_ground = pygame.image.load("Images/fond ground.png").convert()
+        self.landscape = pygame.image.load("images/fond ecran.png").convert()
+        self.fond_ground = pygame.image.load("images/fond ground.png").convert()
         self.fond_btn = self.fond_ground.subsurface(0, 0, 960, 90)
         self.wallpaper = 1
 
-        # Cadres
-        self.cadre = pygame.image.load("Images/Cadres/cadre.png").convert_alpha()
-        self.cadre_pers = pygame.image.load("Images/Cadres/choix personnage.png").convert_alpha()
-        self.cadre_bloc = pygame.image.load("Images/Cadres/bloc.png").convert_alpha()
-        self.cadre_btn = pygame.image.load("Images/Cadres/bouton.png").convert_alpha()
-        self.cadre_btn_select = pygame.image.load("Images/Cadres/bouton select.png").convert_alpha()
-        self.cadre_btn_touch = pygame.image.load("Images/Cadres/bouton touch.png").convert_alpha()
-        self.cadre_resultats = pygame.image.load("Images/Cadres/resultats.png").convert_alpha()
-        self.cadre_delete = pygame.image.load("Images/Cadres/delete.png").convert_alpha()
+        # cadres
+        self.cadre = pygame.image.load("images/cadres/cadre.png").convert_alpha()
+        self.cadre_pers = pygame.image.load("images/cadres/choix personnage.png").convert_alpha()
+        self.cadre_bloc = pygame.image.load("images/cadres/bloc.png").convert_alpha()
+        self.cadre_btn = pygame.image.load("images/cadres/bouton.png").convert_alpha()
+        self.cadre_btn_select = pygame.image.load("images/cadres/bouton select.png").convert_alpha()
+        self.cadre_btn_touch = pygame.image.load("images/cadres/bouton touch.png").convert_alpha()
+        self.cadre_resultats = pygame.image.load("images/cadres/resultats.png").convert_alpha()
+        self.cadre_delete = pygame.image.load("images/cadres/delete.png").convert_alpha()
 
         # Boutons
-        self.btn_column = pygame.image.load("Images/buttons column.png")
+        self.btn_column = pygame.image.load("images/buttons column.png")
 
-        # Blocs
-        self.bloc = pygame.image.load("Images/Blocs/stonebrick.png").convert()
+        # blocs
+        self.bloc = pygame.image.load("images/blocs/stonebrick.png").convert()
         self.corner_blocs = [self.bloc.subsurface(pygame.Rect(x, y, 16, 16))
                              for x, y in ((0, 0), (16,  0), (0, 16), (16, 16))]
         self.slabs = [self.bloc.subsurface(pygame.Rect(0, y, 32, 16))
                       for y in (0, 16)]
         self.slides = [self.bloc.subsurface(pygame.Rect(x, 0, 16, 32))
                        for x in (0, 16)]
-        self.slimeblock = pygame.image.load("Images/Blocs/slimeblock.png").convert()
-        self.poseur = pygame.image.load("Images/Blocs/poseur de bonus.png").convert_alpha()
+        self.slimeblock = pygame.image.load("images/blocs/slimeblock.png").convert()
+        self.poseur = pygame.image.load("images/blocs/poseur de bonus.png").convert_alpha()
         self.poseur_btn = pygame.Surface((32, 32)).convert_alpha()
         self.poseur_btn.fill((0, 0, 0, 0))
         self.poseur_btn.blit(self.poseur, (0, 16))
-        bonus = pygame.image.load("Images/Blocs/bonus.png").convert_alpha()
+        bonus = pygame.image.load("images/blocs/bonus.png").convert_alpha()
         self.bonus = [[bonus.subsurface(0, y * 48, 240, 48).subsurface(48 * x, 0, 48, 48)
                        for x in range(5)] for y in range(3)]
-        animated_blocs = pygame.image.load("Images/Blocs/animated blocs.png").convert()
+        animated_blocs = pygame.image.load("images/blocs/animated blocs.png").convert()
         self.jumper = [animated_blocs.subsurface(32*x, 0, 32, 32) for x in range(16)]
         self.gravitor = [animated_blocs.subsurface(32*x, 32, 32, 32) for x in range(16)]
         self.axel_left = [animated_blocs.subsurface(32*x, 64, 32, 32) for x in range(16)]
         self.axel_right = [animated_blocs.subsurface(32*x, 96, 32, 32) for x in range(16)]
 
         # Players
-        team_gros = pygame.image.load("Images/Perso/team gros.png").convert_alpha()
-        team_sprinter = pygame.image.load("Images/Perso/team sprinter.png").convert_alpha()
-        team_fighter = pygame.image.load("Images/Perso/team fighter.png").convert_alpha()
-        team_tank = pygame.image.load("Images/Perso/team tank.png").convert_alpha()
+        team_gros = pygame.image.load("images/perso/team gros.png").convert_alpha()
+        team_sprinter = pygame.image.load("images/perso/team sprinter.png").convert_alpha()
+        team_fighter = pygame.image.load("images/perso/team fighter.png").convert_alpha()
+        team_tank = pygame.image.load("images/perso/team tank.png").convert_alpha()
         self.sprinter = [team_sprinter.subsurface(0, 104*x, 160, 104) for x in range(3)]
         self.fighter = [team_fighter.subsurface(0, 96*x, 240, 96) for x in range(3)]
         self.tank = [team_tank.subsurface(0, 120*x, 224, 120) for x in range(3)]
         self.gros = [team_gros.subsurface(0, 120*x, 600, 120) for x in range(3)]
-        anim_pers = pygame.image.load("Images/Perso/Animation_pers.png").convert_alpha()
+        anim_pers = pygame.image.load("images/perso/Animation_pers.png").convert_alpha()
         self.anim_degat = [anim_pers.subsurface(60 * 0, 0, 40 * 4, 52 * 2),
                            anim_pers.subsurface(60 * 4, 0, 60 * 4, 48 * 2),
                            anim_pers.subsurface(60 * 8, 0, 56 * 4, 60 * 2)]
@@ -147,62 +147,62 @@ class Images:
                 list_img[i] = dict([(direction, [list_img[i].subsurface(x, y, w, h) for x in range(0, w * 4, w)])
                                     for direction, y in zip((-1, 1), range(0, h * 2, h))])
         self.type = [self.sprinter, self.fighter, self.tank]
-        fleches = pygame.image.load("Images/Perso/fleches.png").convert_alpha()
+        fleches = pygame.image.load("images/perso/fleches.png").convert_alpha()
         self.fleches = [fleches.subsurface(32*x, 0, 32, 32) for x in range(3)]
-        shield = pygame.image.load("Images/Perso/shield.png").convert_alpha()
+        shield = pygame.image.load("images/perso/shield.png").convert_alpha()
         self.shield = [[shield.subsurface(0, y * 84, 1680, 84).subsurface(84 * x, 0, 84, 84)
                         for x in range(20)] for y in range(3)]
 
-        # Attaques petites
-        attak = pygame.image.load("Images/Perso/attak.png").convert_alpha()
+        # attaques petites
+        attak = pygame.image.load("images/perso/attak.png").convert_alpha()
         self.attak = [[attak.subsurface(0, y * 20, 80, 20).subsurface(20*x, 0, 20, 20)
                        for x in range(4)] for y in range(3)]
-        expl = pygame.image.load("Images/Perso/explosions attak.png")
+        expl = pygame.image.load("images/perso/explosions attak.png")
         self.expl = [[expl.subsurface(0, y * 38, 300, 38).subsurface(37*x, 0, 37, 37)
                       for x in range(8)] for y in range(3)]
 
-        # Attaques speciales
-        missile = pygame.image.load("Images/Attaques/missile.png").convert_alpha()
+        # attaques speciales
+        missile = pygame.image.load("images/attaques/missile.png").convert_alpha()
         self.missile = dict([(direction, missile.subsurface(24*x, 0, 24, 24))
                              for direction, x in zip(range(0, 360, 45), range(8))])
-        expl_missile = pygame.image.load("Images/Attaques/explosion missile.png").convert_alpha()
+        expl_missile = pygame.image.load("images/attaques/explosion missile.png").convert_alpha()
         self.expl_missile = [expl_missile.subsurface(64*x, 0, 64, 64) for x in range(25)]
 
-        self.bombe = pygame.image.load("Images/Attaques/bombe.png").convert_alpha()
-        expl_bombe = pygame.image.load("Images/Attaques/explosion bombe.png").convert_alpha()
+        self.bombe = pygame.image.load("images/attaques/bombe.png").convert_alpha()
+        expl_bombe = pygame.image.load("images/attaques/explosion bombe.png").convert_alpha()
         self.expl_bombe = [expl_bombe.subsurface(256*x, 0, 256, 256) for x in range(12)]
 
-        self.glacon_pers = pygame.image.load("Images/Attaques/glacon pers.png").convert_alpha()
-        self.glacon_attak = pygame.image.load("Images/Attaques/glacon missile.png").convert_alpha()
-        expl_glace = pygame.image.load("Images/Attaques/explosion glace.png").convert_alpha()
+        self.glacon_pers = pygame.image.load("images/attaques/glacon pers.png").convert_alpha()
+        self.glacon_attak = pygame.image.load("images/attaques/glacon missile.png").convert_alpha()
+        expl_glace = pygame.image.load("images/attaques/explosion glace.png").convert_alpha()
         self.expl_glace = [expl_glace.subsurface(384 * x, 0, 384, 384) for x in range(19)]
 
-        gros_attak = pygame.image.load("Images/Attaques/gros attaque.png")
+        gros_attak = pygame.image.load("images/attaques/gros attaque.png")
         self.gros_attak = [gros_attak.subsurface(x * 80, 0, 80, 80) for x in range(3)]
 
-        # Particules
-        self.soin = pygame.image.load("Images/Particules/soin.png").convert_alpha()
-        star = pygame.image.load("Images/Particules/star.png").convert_alpha()
+        # particules
+        self.soin = pygame.image.load("images/particules/soin.png").convert_alpha()
+        star = pygame.image.load("images/particules/star.png").convert_alpha()
         self.star = [star.subsurface(x * 32, 0, 32, 32) for x in range(3)]
 
-        # Menu
-        self.ajout_ter = pygame.image.load("Images/Menu/ajout terrain.png").convert_alpha()
+        # menu
+        self.ajout_ter = pygame.image.load("images/menu/ajout terrain.png").convert_alpha()
 
-        # Choose
-        self.cadre_stat = pygame.image.load("Images/Choose/cadre stat.png").convert_alpha()
-        self.coeur = pygame.image.load("Images/Choose/coeur.png").convert_alpha()
-        self.eclair = pygame.image.load("Images/Choose/eclair.png").convert_alpha()
-        fleches = pygame.image.load("Images/Choose/fleches noires.png").convert_alpha()
+        # choose
+        self.cadre_stat = pygame.image.load("images/choose/cadre stat.png").convert_alpha()
+        self.coeur = pygame.image.load("images/choose/coeur.png").convert_alpha()
+        self.eclair = pygame.image.load("images/choose/eclair.png").convert_alpha()
+        fleches = pygame.image.load("images/choose/fleches noires.png").convert_alpha()
         self.fleche_noire = [fleches.subsurface(18 * x, 0, 18, 30) for x in range(2)]
 
-        # Maping
-        self.bloc_vise = pygame.image.load("Images/Maping/bloc vise.png").convert_alpha()
-        self.pers_vise = pygame.image.load("Images/Maping/pers vise.png").convert_alpha()
-        plus_moins = pygame.image.load("Images/Maping/plus moins.png").convert_alpha()
+        # maping
+        self.bloc_vise = pygame.image.load("images/maping/bloc vise.png").convert_alpha()
+        self.pers_vise = pygame.image.load("images/maping/pers vise.png").convert_alpha()
+        plus_moins = pygame.image.load("images/maping/plus moins.png").convert_alpha()
         self.plus_moins = [plus_moins.subsurface(x * 16, 0, 16, 16) for x in range(2)]
 
         # Mini jeu
-        self.papy = pygame.image.load("Images/Mini Jeux/Papy.png").convert_alpha()
+        self.papy = pygame.image.load("images/mini jeux/Papy.png").convert_alpha()
         (w, h) = (int(self.papy.get_width() / 4), int(self.papy.get_height() / 4))
         self.papy = [([self.papy.subsurface(x, y, w, h) for x in range(0, w * 4, w)]) for y in range(0, h * 4, h)]
 
@@ -293,7 +293,7 @@ class Images:
     def create_cadre(self, w, h, name=None):
         """
         Cree un cadre de dimension (w, h)
-        Si le param name est entre, un png sera sauvegarde dans le dossier Images/Cadres/ sous le nom name
+        Si le param name est entre, un png sera sauvegarde dans le dossier images/cadres/ sous le nom name
         :param w: The cadre's width
         :param h: The cadre's height
         :param name: Le nom de l'image pour une sauvegarde optionnelle du cadre
@@ -315,7 +315,7 @@ class Images:
             image.blit(self.cadre.subsurface(6, 2, 3, 1), (w-3, j+2))
 
         if name:
-            pygame.image.save(image, "Images/Cadres/" + name + ".png")
+            pygame.image.save(image, "images/cadres/" + name + ".png")
 
         return image
 
@@ -392,7 +392,7 @@ class Bouton(pygame.sprite.Sprite):
     def move(self, x, y):
         """
         Deplace le bouton
-        Utile dans la fenetre Maping
+        Utile dans la fenetre maping
         :param x: Le decalage a faire sur l'axe des x
         :param y: Le decalage a faire sur l'axe des y
         """
@@ -433,7 +433,7 @@ class BoutonText(Bouton):
     def move(self, x, y):
         """
         Deplace le bouton
-        Utile dans la fenetre Maping
+        Utile dans la fenetre maping
         :param x: Le decalage a faire sur l'axe des x
         :param y: Le decalage a faire sur l'axe des y
         """
@@ -686,5 +686,5 @@ def tsv_to_rgb(t, s, v):
         return v, l, m
 
 
-im = Images()
+im = images()
 font = Font()
