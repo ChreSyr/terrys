@@ -1,0 +1,17 @@
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide
+grav'grav'vide'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'bloc'vide'vide
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide
+vide'vide'grav'vide'jump'vide'jump'vide'jump'vide'jump'vide'jump'vide'jump'vide'jump'vide'jump'vide'jump'vide'jump'vide'grav'vide'vide'vide'vide'vide'vide'vide
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'bloc'bloc'jump'jump
+vide'vide'vide'vide'jump'jump'jump'jump'dalD'dalD'vide'vide'vide'vide'vide'vide'dalD'dalD'dalD'dalD'dalD'esDL'vide'vide'vide'vide'vide'vide'vide'bloc'jump'jump
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'bloc'jump'jump
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'bloc'jump'jump
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'bloc'jump'jump
+vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'dalU'jump'jump
+vide'vide'vide'vide'jump'jump'jump'jump'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'vide'jump'jump
+vide'vide'vide'vide'jump'jump'jump'jump'vide'vide'vide'vide'vide'vide'vide'vide'pieg'vide'vide'vide'vide'vide'vide'esDL'bloc'bloc'esDR'vide'vide'vide'jump'jump
+608'448'192'224'352'352
