@@ -289,7 +289,7 @@ Classe qui definit les personnages
 #Fonction qui prends un screenshot
 def screenshot():
     sub = ecran.subsurface(pygame.Rect(0,0,(len(terrain.contenu[0])-3)*30,(len(terrain.contenu)-3)*30))
-    pygame.image.save(sub,"Screenshot.png")
+    pygame.image.save(sub,"screenshot.png")
 
 #Fonction qui sert a l'affichage dans la fenetre Maping
 def affichage(carre):

@@ -136,7 +136,7 @@ class Terrain:
     # Fonction qui prends un screenshot
     def screenshot(self, name):
         sub = ecran.subsurface(pygame.Rect(0, 0, (len(self.contenu[0]) - 2) * 30, (len(self.contenu) - 3) * 30))
-        if name != "Screenshots/Screenshot":
+        if name != "screenshots/screenshot":
             pygame.image.save(sub, name + ".png")
         else:
             conteur = 0
@@ -1403,7 +1403,7 @@ class Play():
                                 self.open_fen_quit = self.pause = True
                 elif event.type == pygame.KEYDOWN:
                     if event.key == K_SPACE:
-                        ter.screenshot("Screenshots/Screenshot")
+                        ter.screenshot("screenshots/screenshot")
             try:
                 if vert.joystick.get_button(2):
                     self.open_fen_quit = self.pause = True
@@ -1739,7 +1739,7 @@ class Maping():
                             bloc_choisi.left += 60 if event.key == pygame.K_LEFT else -60
 
                     elif event.key == K_SPACE:
-                        ter.screenshot("Screenshots/Screenshot")
+                        ter.screenshot("screenshots/screenshot")
                     elif event.key == K_RETURN:
                         ter.screenshot("Terrains/Terrain" + ter.numero)
                         fen.open_maping = False
@@ -1864,7 +1864,7 @@ class Choose():
                                 fen.open_play = True
                 elif event.type == pygame.KEYDOWN:
                     if event.key == K_SPACE:
-                        ter.screenshot("Screenshots/Screenshot")
+                        ter.screenshot("screenshots/screenshot")
                     elif event.key == K_RETURN:
                         fen.open_choose = False
                         fen.open_play = True

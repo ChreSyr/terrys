@@ -503,7 +503,7 @@ class Font:
         Font est une classe qui contient des polices paires de tailles allant de 14 a 50
         """
         pygame.font.init()
-        font_filename = "Polices/Edson_Comics_Bold.ttf"
+        font_filename = "polices/Edson_Comics_Bold.ttf"
         self.font = dict([(d, x) for d, x in
                           zip(range(14, 51, 2), (pygame.font.Font(font_filename, x) for x in range(14, 51, 2)))])
 

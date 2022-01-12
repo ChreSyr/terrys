@@ -87,7 +87,7 @@ class Game:
             values.append(sentence[sentence.index(":") + 2:])
         actual_ter_name = values[0]
 
-        filenames = glob.glob("Terrains/*.txt")
+        filenames = glob.glob("terrains/*.txt")
         for filename in filenames:
             ter1 = Terrain(filename)
             ter1.find_cases_libres()
@@ -214,16 +214,16 @@ class Game:
     @staticmethod
     def screenshot():
         """
-        Methode qui enregistre un screenshot dans le dossier Screenshot
+        Methode qui enregistre un screenshot dans le dossier screenshot
         """
         sub = ecran.subsurface(0, 0, 1280, 750)
         conteur = 0
         while conteur >= 0:
             conteur += 1
             try:
-                pygame.image.load("Screenshots/Screenshot" + str(conteur) + ".png")
+                pygame.image.load("screenshots/screenshot" + str(conteur) + ".png")
             except pygame.error:
-                pygame.image.save(sub, "Screenshots/Screenshot" + str(conteur) + ".png")
+                pygame.image.save(sub, "screenshots/screenshot" + str(conteur) + ".png")
                 conteur = -1
 
     def save_infos(self):
@@ -1028,6 +1028,8 @@ class Player(pygame.sprite.Sprite):
                     def get_numhats(self):
                         return 4
                     def get_button(self, number):
+                        if number is 4:
+                            return pygame.key.get_pressed()[pygame.K_e]
                         return 0
                     def get_hat(self, number):
                         return 0, 0
