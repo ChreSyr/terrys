@@ -57,7 +57,7 @@ class Game:
             pygame.joystick.Joystick(i).init()
 
         global vert, rouge, bleu, admin
-        vert = Player(0, ia=self.nb_joysticks < 1)  # S'il y a moins de 1 joueur, Player1 est une ia
+        vert = Player(0, ia=False)
         rouge = Player(1, ia=self.nb_joysticks < 2)
         bleu = Player(2, ia=self.nb_joysticks < 3)
         admin = Admin()
@@ -1012,9 +1012,28 @@ class Player(pygame.sprite.Sprite):
         self.direction = -1
         self.ia = ia
         if not ia:
-            self.input = pygame.joystick.Joystick(color)
             if pygame.joystick.get_count() < 1:
                 print("No player connected")
+                class Keyboard():
+                    def get_axis(self, number):
+                        if number is 2:
+                            return pygame.key.get_pressed()[pygame.K_d] - pygame.key.get_pressed()[pygame.K_q]
+                        if number is 3:
+                            return pygame.key.get_pressed()[pygame.K_s] - pygame.key.get_pressed()[pygame.K_z]
+                        return 0
+                    def get_numbuttons(self):
+                        return 20
+                    def get_numaxes(self):
+                        return 4
+                    def get_numhats(self):
+                        return 4
+                    def get_button(self, number):
+                        return 0
+                    def get_hat(self, number):
+                        return 0, 0
+                self.input = Keyboard()
+            else:
+                self.input = pygame.joystick.Joystick(color)
         else:
             self.input = InputIA(self)
 
@@ -1192,8 +1211,9 @@ class Player(pygame.sprite.Sprite):
                             self.vel.y = -20
                     else:
                         dy *= 20
+                        print(self.color, dy, self.vel.y, sign(self.vel.y))
                         # Si on monte
-                        if sign(self.vel.y) == -1:
+                        if self.vel.y < 0:
                             self.vel.y += dy
                         # Si on descend et que la vitesse en y est inferieure a dy
                         elif self.vel.y < dy:
@@ -1696,8 +1716,8 @@ class Play:
             self.pause()
         elif admin.key_down == pygame.K_RETURN:
             jeu.open = "maping"
-        elif admin.key_down == pygame.K_d:
-            self.cases_ia.pop(0)
+        # elif admin.key_down == pygame.K_d:
+        #     self.cases_ia.pop(0)
 
     @staticmethod
     def pause():
