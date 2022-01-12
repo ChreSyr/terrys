@@ -1013,7 +1013,7 @@ class Player(pygame.sprite.Sprite):
         self.ia = ia
         if not ia:
             if pygame.joystick.get_count() < 1:
-                print("No player connected")
+                print("No joystick detected")
                 class Keyboard():
                     def get_axis(self, number):
                         if number is 2:

@@ -108,7 +108,7 @@ class Terrain():
         self.contenu = "\n".join(self.contenu)
 
         #On le met dans le fichier texte
-        fichier_text = open("Terrains/Terrain"+self.numero+".txt","w")
+        fichier_text = open("terrains/terrain"+self.numero+".txt","w")
         fichier_text.write(self.contenu)
         fichier_text.close()
 
@@ -116,7 +116,7 @@ class Terrain():
         self.ouvrir_terrain()
 
     def ouvrir_terrain(self):
-        fichier_text = open("Terrains/Terrain"+self.numero+".txt","r")
+        fichier_text = open("terrains/terrain"+self.numero+".txt","r")
         self.contenu = fichier_text.read()
         fichier_text.close()
 
@@ -2064,7 +2064,7 @@ class Maping():
                 if event.type == pygame.QUIT:
                     fen.open_maping = False
                     fen.open_window = False
-                    ter.screenshot("Terrains/Terrain"+ter.numero)
+                    ter.screenshot("terrains/terrain"+ter.numero)
 
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     clic = pygame.Rect(arrondir(event.pos[0]), arrondir(event.pos[1]), 30, 30)
@@ -2086,7 +2086,7 @@ class Maping():
                                 bloc_choisi.left = clic.left - 5
                         for bouton in ter.grp_btn_maping:
                             if bouton.rect.colliderect(clic):
-                                ter.screenshot("Terrains/Terrain"+ter.numero)
+                                ter.screenshot("terrains/terrain"+ter.numero)
                                 fen.open_maping = False
                                 fen.open_menu = True
                 elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:
@@ -2121,7 +2121,7 @@ class Maping():
                     elif event.key == K_SPACE:
                         ter.screenshot("screenshots/screenshot")
                     elif event.key == K_RETURN:
-                        ter.screenshot("Terrains/Terrain"+ter.numero)
+                        ter.screenshot("terrains/terrain"+ter.numero)
                         fen.open_maping = False
                         fen.open_play = True
                 try:

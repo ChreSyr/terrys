@@ -329,7 +329,7 @@ def ajout(groupe_bloc,groupe_bloc_effet,case,coord_x,coord_y):
 def sauvegarder():
 
     sub = ecran.subsurface(pygame.Rect(0,0,(len(terrain.contenu[0])-2)*30,(len(terrain.contenu)-4)*30))
-    pygame.image.save(sub,"Terrains/Terrain"+terrain.numero+".png")
+    pygame.image.save(sub,"terrains/terrain"+terrain.numero+".png")
 
     terrain.contenu = terrain_vierge(terrain.contenu)
 
